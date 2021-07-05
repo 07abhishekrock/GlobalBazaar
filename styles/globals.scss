@@ -1,0 +1,11 @@
+@use './variables' as variables;
+@use './navbar' as navbar;
+
+body , html{
+    width:100%;
+    height:auto;
+    position:relative;
+    box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+}

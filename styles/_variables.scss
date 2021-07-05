@@ -1,0 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Port+Lligat+Slab:regular);
+
+$main_font : "Raleway" , system , sans-serif;
+$catchy_font : "Port Lligat Slab" , system , sans-serif;
+
+$nav_bar_bg : #ff9f2f;
+$primary_color : #ffb82f;
+$caption_color : #575555;
+
+@mixin background-props($size , $position , $repeat){
+    background-size:$size;
+    background-position:$position;
+    background-repeat:$repeat;
+}
