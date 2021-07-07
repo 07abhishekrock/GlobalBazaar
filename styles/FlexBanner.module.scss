@@ -1,0 +1,57 @@
+@use './variables' as variables;
+
+
+div.flexBanner{
+    display:flex;
+    padding:2em 2.5em;
+    justify-content:center;
+    background-color:black;
+    box-sizing: border-box;
+    &>div.mainLogo{
+        text-align:center;
+        font-size:1.5em;
+        font-family:variables.$main_font;
+        &>h1{
+            font-weight:bold;
+            margin:0px;
+            text-transform:uppercase;
+            color:variables.$primary_color;
+            &>i{
+                font-style:normal;
+                font-weight:bolder;
+                font-size:1.1em;
+                display:block;
+            }
+        }
+        &>span{
+            margin-top:0.5em;
+            display:block;
+            font-weight:600;
+            color:white;
+        }
+    }
+    &>div.briefDiv{
+        display:block;
+        &>p{
+            font-size:1.2em;
+            font-weight:bold;
+            color:white;
+        }
+        &>div.btn-group{
+            display:flex;
+            flex-wrap:wrap;
+            &>button{
+                margin-right:0.5em;
+                font-weight:bold;
+                padding:0.3em 0.5em;
+                border-radius:0.3em;
+                color:black;
+                background-color:white;
+                &.special{
+                    background-color:variables.$primary_color;
+                    color:white;
+                }
+            }
+        }
+    }
+}

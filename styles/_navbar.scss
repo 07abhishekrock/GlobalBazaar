@@ -10,7 +10,8 @@ nav{
     background-color:variables.$nav_bar_bg;
     color:white;
     box-sizing:border-box;
-    border-radius:0px 0px 0.5em 0.5em;
+    position:relative;
+    z-index:100;
     &>span.nav-logo{
         width:5em;
         height:2.5em;
@@ -21,7 +22,7 @@ nav{
         display:flex;
         align-items:center;
         justify-content:flex-end;
-        max-width:700px;
+        max-width:800px;
         flex-grow:1;
         &>div.nav-search{
             flex-grow:1;
@@ -45,6 +46,10 @@ nav{
                 font-style:normal;
             }
             &>ul.nav-search-results{
+
+                //comment the below line to show the search results
+                display:none;
+
                 width:100%;
                 position:absolute;
                 height:auto;

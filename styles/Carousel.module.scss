@@ -1,0 +1,47 @@
+@use '../styles/variables' as variables;
+div.carouselWrapper{
+    width:100%;
+    margin:3em 0px;
+    height:auto;
+    overflow:hidden;
+    position:relative;
+    &>i{
+        position:absolute;
+        cursor:pointer;
+        top:50%;
+        font-size:3em;
+        left:0px;
+        transform:translate(0% , -50%);
+        padding:0px 1em;
+        color:variables.$primary_color;
+        opacity:0.8;
+        &.rightBtn{
+            left:100%;
+            transform:translate(-100% , -50%); 
+        }
+        &[hide="0"]{
+            opacity:0; 
+            pointer-events:none;
+        }
+    }
+    &>div.carousel{
+        display:flex;
+        will-change: transform;
+        transition:transform 0.2s ease-in;
+        &>a.anchorImage{
+            display:block;
+            width:80%;
+            flex-shrink:0;
+            height:26vw; // proportion of (80 / 26 : w / h);
+            border-radius:0.3em;
+            text-decoration:none;
+            &>img{
+                width:calc(100% - 2em);
+                height:100%;
+                margin:0px 1em;
+                object-fit:cover;
+                border-radius:inherit;
+            }
+        }
+    }
+}
