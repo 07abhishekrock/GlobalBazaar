@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Carousel from '../components/Carousel'
 import FlexBanner from '../components/FlexBanner'
 import Logo from '../components/Logo'
+import ParaWithButtons from '../components/ParaWithButtons';
+import CategoriesSection from '../components/CategoriesSection';
 
 export default function Home() {
   let carouselChildren = [
@@ -27,8 +29,9 @@ export default function Home() {
       <Carousel carouselChildren={carouselChildren}/>
       <FlexBanner>
         <Logo/>
-        
+        <ParaWithButtons paraText={"Become a Member to Enjoy Exclusive Benefits , and key alerts on various offers and items."}/> 
       </FlexBanner>
+      <CategoriesSection/>
     </>
   )
 }

@@ -12,3 +12,5 @@ const ParaWithButtons = (props)=>{
         </div>
     )
 }
+
+export default ParaWithButtons;
