@@ -9,19 +9,17 @@ const CategoryBlock = (props)=>{
             <h2>{props.block_heading} 
                 <FontAwesomeIcon icon={faArrowAltCircleRight}></FontAwesomeIcon>
             </h2>
-            <div className={styles['category-block-tags']}>
-                <span>Flat 20% Off</span>
-                <span>Flat Rs 250 Discount</span>
-            </div>
+            <span>Flat 20% Off</span>
+            <span>Flat Rs 250 Discount</span>
         </div>
     )
 }
-const CategoriesSection = ()=>{
+const CategoriesSection = (props)=>{
     return (
         <div className={styles['categories-section']}>
             <DesignerHeading heading_text={"Categories"}/>
             <div>
-                <CategoryBlock block_heading={"Name"}/>
+                {props.children}
             </div>
         </div>
     );

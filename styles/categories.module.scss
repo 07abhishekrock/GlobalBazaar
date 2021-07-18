@@ -1,4 +1,43 @@
+@use './variables' as variables;
 div.categories-section{
     padding:2em;
     box-sizing: border-box;
+    &>div{
+        margin-top:5em;
+        display:grid;
+        grid-template-columns: repeat(3 , 1fr);
+        justify-items:center;
+        grid-gap:4em 0px;
+        &>div.category-block{
+            width:300px;
+            &>div.category-block-image{
+                background-size:cover;
+                height:250px;
+                border:1px solid black;
+            }
+            &>h2{
+                display:flex;
+                justify-content:space-between;
+                font-weight:800;
+                font-size:1.8em;
+                margin-bottom:0.5em;
+                align-items: center;
+                font-family:variables.$main_font;
+                &>svg{
+                    color:variables.$primary_color;
+                }
+            }
+            &>span{
+                background-color:variables.$lighter_primary;
+                padding:0.3em 0.5em;
+                color:variables.$caption_color;
+                display:block;
+                margin-bottom:0.5em;
+                width:fit-content;
+                font-family: variables.$main_font;
+                font-weight:bold;
+                border-radius:0.3em;
+            }
+        }
+    }
 }

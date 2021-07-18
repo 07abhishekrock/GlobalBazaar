@@ -3,7 +3,7 @@ import Carousel from '../components/Carousel'
 import FlexBanner from '../components/FlexBanner'
 import Logo from '../components/Logo'
 import ParaWithButtons from '../components/ParaWithButtons';
-import CategoriesSection from '../components/CategoriesSection';
+import { CategoriesSection , CategoryBlock } from '../components/CategoriesSection';
 
 export default function Home() {
   let carouselChildren = [
@@ -31,7 +31,13 @@ export default function Home() {
         <Logo/>
         <ParaWithButtons paraText={"Become a Member to Enjoy Exclusive Benefits , and key alerts on various offers and items."}/> 
       </FlexBanner>
-      <CategoriesSection/>
+      <CategoriesSection>
+        <CategoryBlock block_heading = {"Grocery"}/>
+        <CategoryBlock block_heading = {"Grocery"}/>
+        <CategoryBlock block_heading = {"Grocery"}/>
+        <CategoryBlock block_heading = {"Grocery"}/>
+        <CategoryBlock block_heading = {"Grocery"}/>
+      </CategoriesSection>
     </>
   )
 }
