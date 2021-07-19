@@ -4,7 +4,7 @@ import { faChevronCircleLeft , faChevronCircleRight } from "@fortawesome/free-so
 import styles from '../styles/Carousel.module.scss';
 
 const Carousel = ({carouselChildren , remProps})=>{
-    let [ total_elements , set_total_elements ] = useState(carouselChildren.length);
+    const total_elements = carouselChildren.length;
     let [ current_selected_index , set_current_selected_index ] = useState(Math.floor(total_elements / 2));
     let [ limit_exceeded , set_limit_exceeded ]  = useState([1 , 1]); 
 
@@ -31,7 +31,7 @@ const Carousel = ({carouselChildren , remProps})=>{
 
     return (
         <div className={styles.carouselWrapper}>
-            <div className={styles.carousel} style={{transform:`translateX(calc(10% + calc(-80% * ${current_selected_index})))`}}>
+            <div className={styles.carousel} style={{transform:`translateX(calc(0% + calc(-100% * ${current_selected_index})))`}}>
                 {carouselChildren.map((child , index)=>{
                     return (
                         <a className={styles.anchorImage} href={child.href} key={index}>

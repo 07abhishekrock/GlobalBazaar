@@ -1,0 +1,109 @@
+@use './variables' as variables;
+
+div.special-banner-wrapper{
+    margin-top:4em;
+    padding:2em;
+    font-family:variables.$main_font;
+    &>h1{
+        font-size:3em;
+        text-transform:uppercase;
+    }
+    &>div.special-banner{
+        display:flex;
+        flex-flow:row;
+        justify-content:center;
+        padding:2em;
+        &.left-align{
+            flex-flow:row-reverse;
+            &>div.banner-grid{
+                margin-right:0px;
+                margin-left:20%;
+            }
+        }
+        &>div.banner-grid{
+            display:grid;
+            grid-template-columns:repeat(2 , 1fr);
+            justify-items:center;
+            align-content:center;
+            grid-gap:2em 3em;
+            margin-right:20%;
+        }
+        &>div.special-banner-highlight{
+            background-color:black;
+            height:fit-content;
+            align-self:center;
+            width:400px;
+            padding:1em 2em;
+            display:flex;
+            flex-flow:column;
+            align-items:center;
+            border-radius:0.5em;
+            &>h1{
+                width:250px;
+                font-family:variables.$catchy_font;
+                padding:0.5em;
+                border:4px solid white;
+                font-size:2.5em;
+                color:white;
+                text-align:center;
+            }
+        }
+    }
+}
+
+div.striked-price{
+    color:white;
+    margin-top:3em;
+    &>span{
+        display:block;
+        text-align:center;
+        font-family:variables.$catchy_font;
+        &.old-price{
+            font-weight:550;
+            font-size:2em;
+            text-decoration:line-through;
+            margin:0.5em 0px;
+        }
+        &.new-price{
+            font-size:3em;
+        }
+        &.time-remaining{
+            font-size:2.5em; 
+            font-family:variables.$poppins_font;
+            color:variables.$primary_color;
+            display:block;
+            margin:0.5em 0px;
+            letter-spacing:0.05em;
+            font-weight:700;
+        }
+    }
+}
+
+
+div.item-block{
+    width:250px;
+    font-family:variables.$main_font;
+    &>div.item-image{
+        width:100%;
+        height:250px;
+        border:1px solid black;
+        background-position:center;
+        background-size:cover;
+    }
+    &>h3{
+        font-size:1.5em;
+        font-weight:600;
+        margin-bottom:0.5em;
+    }
+    &>span{
+        font-weight:550;
+        text-decoration:line-through;
+        &>i{
+            font-style:normal;
+            text-decoration:none;
+            color:variables.$primary_color;
+            display:inline-block;
+            margin-left:1em;
+        }
+    }
+}

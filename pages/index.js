@@ -2,8 +2,11 @@ import Head from 'next/head'
 import Carousel from '../components/Carousel'
 import FlexBanner from '../components/FlexBanner'
 import Logo from '../components/Logo'
+import SpecialBanner from '../components/SpecialBanner';
 import ParaWithButtons from '../components/ParaWithButtons';
 import { CategoriesSection , CategoryBlock } from '../components/CategoriesSection';
+import { StrikedPriceWithTime } from '../components/StrikedPrice';
+import ItemBlock from '../components/ItemBlock';
 
 export default function Home() {
   let carouselChildren = [
@@ -38,6 +41,15 @@ export default function Home() {
         <CategoryBlock block_heading = {"Grocery"}/>
         <CategoryBlock block_heading = {"Grocery"}/>
       </CategoriesSection>
+      <SpecialBanner heading={"Daily Offers"} highlight_heading={"Rolex Watch"} isLeft={true}>
+        <div>
+          <StrikedPriceWithTime/> 
+        </div>
+        <ItemBlock itemName={"Iphone8"} itemNewPrice={"Rs 80,000"} itemOldPrice={"Rs 75,000"}/>
+        <ItemBlock itemName={"Iphone8"} itemNewPrice={"Rs 80,000"} itemOldPrice={"Rs 75,000"}/>
+        <ItemBlock itemName={"Iphone8"} itemNewPrice={"Rs 80,000"} itemOldPrice={"Rs 75,000"}/>
+        <ItemBlock itemName={"Iphone8"} itemNewPrice={"Rs 80,000"} itemOldPrice={"Rs 75,000"}/>
+      </SpecialBanner>
     </>
   )
 }
