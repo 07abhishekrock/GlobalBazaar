@@ -94,6 +94,13 @@ div.item-block{
         font-size:1.5em;
         font-weight:600;
         margin-bottom:0.5em;
+        display:flex;
+        align-items:center;
+        justify-content: space-between;
+        &>svg{
+            font-size:0.8em;
+            color:variables.$nav_bar_bg;
+        }
     }
     &>span{
         font-weight:550;

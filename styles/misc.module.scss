@@ -33,3 +33,24 @@ h1.designer-heading{
         left:calc(60% + 0.5em);
     }
 }
+
+
+div.list-with-heading{
+    font-family:variables.$main_font;
+    &>h3{
+        color:variables.$primary_color;
+        font-size:1.3em;
+        margin-bottom:0.5em;
+    }
+    &>ul{
+        padding-left:0px;
+        margin:0px;
+        &>a{
+            font-family: variables.$inter_font;
+            display:block;
+            margin:0.5em 0px;
+            text-decoration:none;
+            color:white;
+        }
+    }
+}

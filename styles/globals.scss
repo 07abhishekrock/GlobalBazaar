@@ -9,3 +9,19 @@ body , html{
     margin:0px;
     padding:0px;
 }
+
+footer.site-footer{
+    background-color:black;
+    padding:2em;
+    color:white;
+    &>div.footer-wrapper{
+        display:flex;
+        &>div.footer-links-wrapper{
+            display:grid;
+            grid-template-columns:repeat(3 , 250px);
+        }
+        &>div.empty-space{
+            width:200px;
+        }
+    }
+}
