@@ -54,3 +54,37 @@ div.list-with-heading{
         }
     }
 }
+
+div.loader-wrapper{
+    position:fixed;
+    background-color:rgba(0,0,0,0.3);
+    z-index:1010;
+    display:grid;
+    place-items:center;
+    inset : 0px;
+    &>div.loader{
+        display:flex;
+        &>span{
+            width:1.5em;
+            height:1.5em;
+            margin:0px 0.5em;
+            box-shadow:0px 0px 20px 5px rgba(0,0,0,0.05);
+            animation:squish-rotate 1s ease-in-out infinite;
+            background-color:variables.$primary_color;
+        }
+        @keyframes squish-rotate {
+            0%{
+                transform:rotateZ(0deg);
+                border-radius:0.5em;
+            } 
+            50%{
+                transform:rotateZ(180deg);
+                border-radius:10%;
+            }
+            100%{
+                transform: rotateZ(360deg);
+                border-radius:50%;
+            }
+        }
+    }
+}

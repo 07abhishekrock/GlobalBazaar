@@ -1,0 +1,140 @@
+@use './variables' as variables;
+
+div.single-page-form-wrapper{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    gap:10%;
+    padding:5em 0px;
+    font-family:variables.$main_font;
+    &>div.single-page-highlight{
+        width:600px;
+        flex-shrink:0;
+        text-align:center;
+        display:flex;
+        flex-flow:column;
+        align-items:center;
+        padding:1em 2.5em;
+        box-sizing: border-box;
+        &>div{
+            width:14em;
+            height:14em;
+            border-radius:50%;
+            background-color:darkgray;
+        }
+        &>p{
+            font-weight:550;
+            font-size:1.8em;
+        }
+    }
+    &>div.single-page-form{
+        &>h1{
+            text-align:center;
+            font-size:3em;
+            text-transform:uppercase;
+            margin-bottom:0px;
+        }
+        &>span{
+            text-align:center;
+            display:block;
+            margin-top:0.5em;
+            font-size:0.9em;
+            font-weight:550;
+            text-transform:uppercase;
+            color:#333; 
+            margin-bottom:1em;
+            &>a{
+                text-decoration:none;
+            }
+        }
+        &>form.form{
+            width:400px;
+            overflow:hidden;
+            padding-top:1em;
+            position:relative;
+            &>div.form-pages{
+                width:400px;
+                display:flex;
+                transition:transform 0.3s ease-in;
+                &>div.form-page{
+                    flex-shrink:0;
+                    width:100%;
+                    &>span.back-btn{
+                        font-size:0.9em;
+                        color:variables.$primary_color;
+                        margin-top:1em;
+                        font-weight:700;
+                        cursor:pointer;
+                    }
+                    &>button{
+                        width:100%;
+                        display:block;
+                        padding:0.5em 0px;
+                        font-weight:800;
+                        cursor:pointer;
+                        background-color:variables.$primary_color;
+                        color:white;
+                        border-radius:0.3em;
+                        font-size:1.2em;
+                        font-family:inherit;
+                        border:0px;
+                        text-transform:uppercase;
+                        margin-top:0.5em;
+                    }
+                    &>div.form-input-group{
+                        margin:1.5em 0px;
+                        &:first-child{
+                            margin-top:0px;
+                        }
+                        &:last-child{
+                            margin-bottom:2em;;
+                        }
+                        &.contact{
+                            &>span{
+                                font-weight:600;
+                                margin-right:0.5em;
+                                width:100%;
+                                display:flex;
+                                justify-content:flex-start;
+                                align-items:center;
+                                &>input{
+                                    margin-left:0.5em;
+                                }
+                            }
+                        }
+                        &>label{
+                            display:block;
+                            font-size:1.1em;
+                            font-weight:550;
+                            margin-bottom:0.3em;
+                            text-transform:uppercase;
+                        }
+                        &>i{
+                            color:red;
+                            font-size:0.7em;
+                            font-weight:500;
+                            font-style:normal;
+                        }
+                        & input.form-input{
+                            width:100%;
+                            padding:0.3em 0.5em;
+                            font-size:1.1em;
+                            box-sizing:border-box;
+                            flex-grow:1;
+                            font-family:inherit;
+                            font-weight:550;
+                            border:2px solid lightgray;
+                            border-radius:0.3em;
+                            display:inline-block;
+
+                            &:focus{
+                                border-color:black;
+                                outline:None;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

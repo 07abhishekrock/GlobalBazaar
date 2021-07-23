@@ -10,6 +10,16 @@ body , html{
     padding:0px;
 }
 
+*{
+    font-variant-numeric: lining-nums;
+    -moz-font-feature-settings:"lnum" 1; 
+    -moz-font-feature-settings:"lnum=1"; 
+    -ms-font-feature-settings:"lnum" 1; 
+    -o-font-feature-settings:"lnum" 1; 
+    -webkit-font-feature-settings:"lnum" 1; 
+    font-feature-settings:"lnum" 1;
+}
+
 footer.site-footer{
     background-color:black;
     padding:2em;
@@ -18,10 +28,12 @@ footer.site-footer{
         display:flex;
         &>div.footer-links-wrapper{
             display:grid;
-            grid-template-columns:repeat(3 , 250px);
+            grid-template-columns:repeat(3 , 300px);
         }
         &>div.empty-space{
             width:200px;
+            flex-grow:1;
+            background-color:#333;
         }
     }
 }
